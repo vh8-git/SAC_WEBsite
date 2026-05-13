@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner werden – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-light:#A8E6D9; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--mint); transition:width 0.3s; border-radius:2px; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { background:var(--mint) !important; color:white !important; padding:0.6rem 1.5rem; border-radius:50px; font-weight:600 !important; }
+    .nav-cta::after { display:none !important; }
+    .page-hero { padding:9rem 3rem 5rem; background:linear-gradient(135deg,var(--mint-pale) 0%,white 55%,#d4f5ee 100%); position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(91,200,175,0.12) 0%,transparent 70%); top:-250px; right:-150px; pointer-events:none; }
+    .page-hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-label { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(91,200,175,0.12); border:1px solid rgba(91,200,175,0.3); color:var(--mint-dark); padding:0.4rem 1rem; border-radius:50px; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; }
+    .page-hero h1 { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; letter-spacing:-0.02em; line-height:1.1; margin-bottom:1.25rem; }
+    .page-hero h1 span { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-hero p { font-size:1.1rem; color:var(--gray); line-height:1.7; max-width:640px; }
+    .content-section { padding:6rem 3rem; }
+    .content-section.alt { background:var(--gray-light); }
+    .content-section.dark { background:linear-gradient(135deg,var(--dark) 0%,#1f3d36 100%); }
+    .content-inner { max-width:1100px; margin:0 auto; }
+    .section-label { color:var(--mint); font-weight:700; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:1rem; line-height:1.2; }
+    .section-sub { color:var(--gray); font-size:1.05rem; max-width:600px; line-height:1.7; margin-bottom:3rem; }
+
+    .benefits-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .benefit-card { background:white; border-radius:20px; padding:2rem 1.75rem; box-shadow:0 4px 25px rgba(91,200,175,0.07); display:flex; gap:1.25rem; transition:transform 0.3s; }
+    .benefit-card:hover { transform:translateY(-4px); }
+    .benefit-icon { width:52px; height:52px; background:linear-gradient(135deg,var(--mint),var(--mint-dark)); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
+    .benefit-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:0.4rem; }
+    .benefit-card p { color:var(--gray); font-size:0.92rem; line-height:1.65; }
+
+    .steps-grid { display:flex; flex-direction:column; gap:0; position:relative; max-width:700px; margin:0 auto; }
+    .steps-grid::before { content:''; position:absolute; left:28px; top:50px; bottom:50px; width:2px; background:linear-gradient(to bottom,var(--mint),transparent); }
+    .step-row { display:flex; gap:2rem; padding:1.5rem 0; }
+    .step-circle { width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,var(--mint),var(--mint-dark)); display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-size:1.2rem; flex-shrink:0; position:relative; z-index:1; box-shadow:0 6px 20px rgba(91,200,175,0.35); }
+    .step-body h3 { font-size:1.05rem; font-weight:700; color:white; margin-bottom:0.35rem; margin-top:0.9rem; }
+    .step-body p { color:rgba(255,255,255,0.65); font-size:0.92rem; line-height:1.6; }
+
+    .contact-box { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); border-radius:28px; padding:4rem; text-align:center; }
+    .contact-box h2 { font-size:clamp(1.6rem,3vw,2.4rem); font-weight:800; color:white; margin-bottom:1rem; }
+    .contact-box p { color:rgba(255,255,255,0.85); font-size:1.05rem; margin-bottom:2rem; line-height:1.65; }
+    .btn-white { display:inline-flex; align-items:center; gap:0.5rem; background:white; color:var(--mint-dark); padding:1rem 2.4rem; border-radius:50px; font-weight:800; font-size:1.05rem; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.12); transition:transform 0.25s; }
+    .btn-white:hover { transform:translateY(-3px); }
+
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+    .reveal-delay-3 { transition-delay:0.3s; }
+
+    footer { background:var(--dark); padding:4rem 3rem 2rem; color:rgba(255,255,255,0.65); }
+    .footer-grid { max-width:1200px; margin:0 auto 3rem; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; }
+    .footer-brand img { height:48px; margin-bottom:1rem; filter:brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size:0.9rem; line-height:1.65; max-width:260px; }
+    .footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1.25rem; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--mint); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.85rem; }
+    .footer-badge { display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.06); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; }
+    @media (max-width:900px) { nav { padding:1rem 1.5rem; } .nav-links { display:none; } .page-hero { padding:7rem 1.5rem 4rem; } .content-section { padding:4rem 1.5rem; } .benefits-grid { grid-template-columns:1fr; } .contact-box { padding:2.5rem 1.5rem; } .footer-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Smile &amp; Care" /></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#why">Vorteile</a></li>
+      <li><a href="index.html#partners">Partner</a></li>
+      <li><a href="index.html#how">So funktioniert's</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="https://smileandcare.eu" class="nav-cta" target="_blank" rel="noopener">Jetzt beraten lassen</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Partner werden</span></div>
+      <div class="page-label">🤝 Partnerschaft</div>
+      <h1>Gemeinsam für<br/><span>bessere Zähne.</span></h1>
+      <p>Sie sind Zahnarzt, Finanzberater, Arbeitgeber oder Plattform? Werden Sie Smile &amp; Care Partner und bieten Sie Ihren Kunden oder Mitarbeitern Zugang zu den besten Zahnzusatzversicherungen Deutschlands.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="section-label" style="text-align:center">Ihre Vorteile</div>
+      <h2 class="section-title" style="text-align:center">Warum Partner werden?</h2>
+      <p class="section-sub" style="margin:0 auto 3rem;text-align:center">Profitieren Sie von unserem Netzwerk und bieten Sie echten Mehrwert.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">💶</div>
+          <div>
+            <h3>Attraktive Provision</h3>
+            <p>Verdienen Sie bei jeder erfolgreich vermittelten Versicherung eine marktgerechte Provision – transparent und pünktlich ausgezahlt.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon">🎯</div>
+          <div>
+            <h3>Exklusiver Produktzugang</h3>
+            <p>Als Partner erhalten Sie Zugang zu unseren exklusiven Tarifen – inklusive Angeboten, die online nicht verfügbar sind.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon">📊</div>
+          <div>
+            <h3>Eigenes Dashboard</h3>
+            <p>Verwalten Sie Ihre Kundenanfragen, Abschlüsse und Provisionen jederzeit in unserem übersichtlichen Partner-Portal.</p>
+          </div>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon">🏆</div>
+          <div>
+            <h3>Marketing-Support</h3>
+            <p>Wir unterstützen Sie mit Co-Branding-Materialien, Schulungen und einem persönlichen Ansprechpartner.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section dark">
+    <div class="content-inner">
+      <div class="section-label">Der Weg zur Partnerschaft</div>
+      <h2 class="section-title" style="color:white">In 3 Schritten Partner werden</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.65);margin:0 auto 3rem">Unkompliziert, schnell und ohne bürokratischen Aufwand.</p>
+      <div class="steps-grid">
+        <div class="step-row reveal">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <h3>Kontakt aufnehmen</h3>
+            <p>Schreiben Sie uns eine kurze Nachricht mit Informationen zu Ihrem Unternehmen und Ihrer Zielgruppe.</p>
+          </div>
+        </div>
+        <div class="step-row reveal reveal-delay-1">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <h3>Kooperationsvertrag abschließen</h3>
+            <p>Wir schicken Ihnen unseren Partnervertrag – fair, klar und ohne Kleingedrucktes. Alles digital in wenigen Minuten.</p>
+          </div>
+        </div>
+        <div class="step-row reveal reveal-delay-2">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <h3>Loslegen &amp; verdienen</h3>
+            <p>Sie erhalten Zugang zu unserem Partner-Portal und können sofort Kunden weiterleiten und Provision erhalten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section alt">
+    <div class="content-inner">
+      <div class="contact-box reveal">
+        <h2>Bereit für die Partnerschaft?</h2>
+        <p>Kontaktieren Sie uns jetzt – unverbindlich und ohne Risiko.<br/>Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        <a href="mailto:partner@smileandcare.eu" class="btn-white">Jetzt Partner werden →</a>
+        <p style="margin-top:1.25rem;font-size:0.85rem;color:rgba(255,255,255,0.7);">Oder schreiben Sie uns direkt: <a href="mailto:partner@smileandcare.eu" style="color:white;font-weight:700;">partner@smileandcare.eu</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html"><img src="logo.png" alt="Smile &amp; Care" /></a><p>Ihr unabhängiger Partner für Zahnzusatzversicherungen in Deutschland.</p></div>
+      <div class="footer-col"><h4>Produkte</h4><ul><li><a href="index.html#features">Zahnersatz</a></li><li><a href="index.html#features">Kieferorthopädie</a></li><li><a href="index.html#features">PZR</a></li><li><a href="index.html#features">Implantate</a></li></ul></div>
+      <div class="footer-col"><h4>Unternehmen</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="karriere.html">Karriere</a></li><li><a href="presse.html">Presse</a></li><li><a href="partner-werden.html">Partner werden</a></li></ul></div>
+      <div class="footer-col"><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="agb.html">AGB</a></li><li><a href="cookie-einstellungen.html">Cookie-Einstellungen</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Smile &amp; Care GmbH. Alle Rechte vorbehalten.</p><div class="footer-badge">🔒 IDD-konform &nbsp;|&nbsp; BaFin-reguliert</div></div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60));
+    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  </script>
+</body>
+</html>

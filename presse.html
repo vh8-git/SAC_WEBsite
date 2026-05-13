@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presse – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-light:#A8E6D9; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--mint); transition:width 0.3s; border-radius:2px; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { background:var(--mint) !important; color:white !important; padding:0.6rem 1.5rem; border-radius:50px; font-weight:600 !important; }
+    .nav-cta::after { display:none !important; }
+    .page-hero { padding:9rem 3rem 5rem; background:linear-gradient(135deg,var(--mint-pale) 0%,white 55%,#d4f5ee 100%); position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(91,200,175,0.12) 0%,transparent 70%); top:-250px; right:-150px; pointer-events:none; }
+    .page-hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-label { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(91,200,175,0.12); border:1px solid rgba(91,200,175,0.3); color:var(--mint-dark); padding:0.4rem 1rem; border-radius:50px; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; }
+    .page-hero h1 { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; letter-spacing:-0.02em; line-height:1.1; margin-bottom:1.25rem; }
+    .page-hero h1 span { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-hero p { font-size:1.1rem; color:var(--gray); line-height:1.7; max-width:640px; }
+    .content-section { padding:6rem 3rem; }
+    .content-section.alt { background:var(--gray-light); }
+    .content-inner { max-width:1100px; margin:0 auto; }
+    .section-label { color:var(--mint); font-weight:700; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:1rem; line-height:1.2; }
+    .section-sub { color:var(--gray); font-size:1.05rem; max-width:600px; line-height:1.7; margin-bottom:3rem; }
+
+    .press-list { display:flex; flex-direction:column; gap:1.5rem; }
+    .press-item { background:white; border-radius:20px; padding:2rem 2.25rem; box-shadow:0 4px 25px rgba(91,200,175,0.07); display:grid; grid-template-columns:auto 1fr auto; gap:2rem; align-items:center; border-left:4px solid var(--mint); transition:transform 0.3s; }
+    .press-item:hover { transform:translateX(6px); }
+    .press-date { font-size:0.82rem; color:var(--mint-dark); font-weight:700; white-space:nowrap; background:var(--mint-pale); padding:0.4rem 0.9rem; border-radius:20px; }
+    .press-item h3 { font-size:1.05rem; font-weight:700; margin-bottom:0.3rem; }
+    .press-item p { font-size:0.9rem; color:var(--gray); line-height:1.55; }
+    .press-link { color:var(--mint-dark); text-decoration:none; font-weight:700; font-size:0.88rem; white-space:nowrap; border:2px solid var(--mint); padding:0.5rem 1.1rem; border-radius:30px; transition:all 0.2s; }
+    .press-link:hover { background:var(--mint); color:white; }
+
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .contact-card { background:white; border-radius:20px; padding:2.5rem; box-shadow:0 4px 25px rgba(91,200,175,0.07); }
+    .contact-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:1.25rem; }
+    .contact-detail { display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem; font-size:0.95rem; color:var(--gray); }
+    .contact-detail a { color:var(--mint-dark); text-decoration:none; }
+    .contact-detail a:hover { text-decoration:underline; }
+
+    .kit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .kit-card { background:white; border-radius:16px; padding:1.75rem; box-shadow:0 4px 20px rgba(91,200,175,0.07); text-align:center; border:2px solid transparent; transition:all 0.3s; cursor:pointer; }
+    .kit-card:hover { border-color:var(--mint); transform:translateY(-4px); }
+    .kit-icon { font-size:2.2rem; margin-bottom:1rem; }
+    .kit-card h4 { font-size:0.95rem; font-weight:700; margin-bottom:0.35rem; }
+    .kit-card p { font-size:0.82rem; color:var(--gray); }
+
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+
+    footer { background:var(--dark); padding:4rem 3rem 2rem; color:rgba(255,255,255,0.65); }
+    .footer-grid { max-width:1200px; margin:0 auto 3rem; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; }
+    .footer-brand img { height:48px; margin-bottom:1rem; filter:brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size:0.9rem; line-height:1.65; max-width:260px; }
+    .footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1.25rem; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--mint); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.85rem; }
+    .footer-badge { display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.06); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; }
+    @media (max-width:900px) { nav { padding:1rem 1.5rem; } .nav-links { display:none; } .page-hero { padding:7rem 1.5rem 4rem; } .content-section { padding:4rem 1.5rem; } .contact-grid, .kit-grid { grid-template-columns:1fr; } .press-item { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Smile &amp; Care" /></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#why">Vorteile</a></li>
+      <li><a href="index.html#partners">Partner</a></li>
+      <li><a href="index.html#how">So funktioniert's</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="https://smileandcare.eu" class="nav-cta" target="_blank" rel="noopener">Jetzt beraten lassen</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Presse</span></div>
+      <div class="page-label">📰 Presse &amp; Medien</div>
+      <h1>Smile &amp; Care<br/><span>in den Medien.</span></h1>
+      <p>Aktuelle Pressemitteilungen, Mediendaten und Kontaktinformationen für Journalisten und Redaktionen.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="section-label">Aktuelles</div>
+      <h2 class="section-title">Pressemitteilungen</h2>
+      <div class="press-list">
+        <div class="press-item reveal">
+          <span class="press-date">März 2026</span>
+          <div>
+            <h3>Smile &amp; Care expandiert: Neue Partnerschaft mit zwei weiteren Krankenversicherern</h3>
+            <p>Der unabhängige Zahnversicherungsvermittler Smile &amp; Care gibt den Abschluss von zwei neuen exklusiven Partnerverträgen bekannt und stärkt damit sein Angebot für Endkunden.</p>
+          </div>
+          <a href="mailto:presse@smileandcare.eu" class="press-link">Anfragen →</a>
+        </div>
+        <div class="press-item reveal reveal-delay-1">
+          <span class="press-date">Jan. 2026</span>
+          <div>
+            <h3>5.000 Kunden – Smile &amp; Care verzeichnet starkes Wachstum im Jahr 2025</h3>
+            <p>Smile &amp; Care blickt auf ein erfolgreiches Jahr zurück: Über 5.000 Kunden haben 2025 über den Makler eine Zahnzusatzversicherung abgeschlossen.</p>
+          </div>
+          <a href="mailto:presse@smileandcare.eu" class="press-link">Anfragen →</a>
+        </div>
+        <div class="press-item reveal reveal-delay-2">
+          <span class="press-date">Sept. 2025</span>
+          <div>
+            <h3>Studie: 72 % der Deutschen unterschätzen ihre Zahnarztkosten – Smile &amp; Care klärt auf</h3>
+            <p>Eine neue Analyse von Smile &amp; Care zeigt, dass die meisten gesetzlich Versicherten ihre jährlichen Eigenanteile beim Zahnarzt deutlich unterschätzen.</p>
+          </div>
+          <a href="mailto:presse@smileandcare.eu" class="press-link">Anfragen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section alt">
+    <div class="content-inner">
+      <div class="section-label">Downloads</div>
+      <h2 class="section-title">Medienkit</h2>
+      <p class="section-sub">Logos, Bilder und Informationsmaterialien für Ihre Berichterstattung.</p>
+      <div class="kit-grid">
+        <div class="kit-card reveal">
+          <div class="kit-icon">🖼️</div>
+          <h4>Logo-Paket</h4>
+          <p>PNG, SVG &amp; EPS in allen Varianten</p>
+        </div>
+        <div class="kit-card reveal reveal-delay-1">
+          <div class="kit-icon">📄</div>
+          <h4>Factsheet</h4>
+          <p>Alle Kennzahlen und Fakten auf einer Seite</p>
+        </div>
+        <div class="kit-card reveal reveal-delay-2">
+          <div class="kit-icon">🎨</div>
+          <h4>Brand Guidelines</h4>
+          <p>Farben, Typografie und Verwendungsregeln</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:2rem;color:var(--gray);font-size:0.9rem;">Für den Download bitte <a href="mailto:presse@smileandcare.eu" style="color:var(--mint-dark)">presse@smileandcare.eu</a> kontaktieren.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="content-inner">
+      <div class="section-label">Kontakt</div>
+      <h2 class="section-title">Pressekontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Medienanfragen</h3>
+          <div class="contact-detail">📧 <a href="mailto:presse@smileandcare.eu">presse@smileandcare.eu</a></div>
+          <div class="contact-detail">📞 <span>+49 (0) 30 000 000 00</span></div>
+          <div class="contact-detail">⏱️ <span>Antwort innerhalb von 24 Stunden</span></div>
+        </div>
+        <div class="contact-card reveal reveal-delay-1">
+          <h3>Unternehmensinfos</h3>
+          <div class="contact-detail">🏢 <span>Smile &amp; Care GmbH</span></div>
+          <div class="contact-detail">📍 <span>Berlin, Deutschland</span></div>
+          <div class="contact-detail">🌐 <a href="https://smileandcare.eu" target="_blank">smileandcare.eu</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html"><img src="logo.png" alt="Smile &amp; Care" /></a><p>Ihr unabhängiger Partner für Zahnzusatzversicherungen in Deutschland.</p></div>
+      <div class="footer-col"><h4>Produkte</h4><ul><li><a href="index.html#features">Zahnersatz</a></li><li><a href="index.html#features">Kieferorthopädie</a></li><li><a href="index.html#features">PZR</a></li><li><a href="index.html#features">Implantate</a></li></ul></div>
+      <div class="footer-col"><h4>Unternehmen</h4><ul><li><a href="ueber-uns.html">Über uns</a></li><li><a href="karriere.html">Karriere</a></li><li><a href="presse.html">Presse</a></li><li><a href="partner-werden.html">Partner werden</a></li></ul></div>
+      <div class="footer-col"><h4>Rechtliches</h4><ul><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li><li><a href="agb.html">AGB</a></li><li><a href="cookie-einstellungen.html">Cookie-Einstellungen</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Smile &amp; Care GmbH. Alle Rechte vorbehalten.</p><div class="footer-badge">🔒 IDD-konform &nbsp;|&nbsp; BaFin-reguliert</div></div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60));
+    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  </script>
+</body>
+</html>

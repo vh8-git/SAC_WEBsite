@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Cookie-Einstellungen – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--mint); transition:width 0.3s; border-radius:2px; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { background:var(--mint) !important; color:white !important; padding:0.6rem 1.5rem; border-radius:50px; font-weight:600 !important; }
+    .nav-cta::after { display:none !important; }
+    .page-hero { padding:8rem 3rem 3.5rem; background:var(--gray-light); }
+    .page-hero-inner { max-width:860px; margin:0 auto; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:0.75rem; }
+    .page-hero p { color:var(--gray); font-size:1rem; }
+
+    /* Main content */
+    .cookie-wrap { max-width:860px; margin:0 auto; padding:4rem 3rem 6rem; }
+    .info-box { background:var(--mint-pale); border-left:4px solid var(--mint); padding:1.25rem 1.5rem; border-radius:0 12px 12px 0; margin-bottom:2.5rem; }
+    .info-box p { margin:0; color:var(--dark); font-size:0.93rem; line-height:1.7; }
+
+    /* Cookie category cards */
+    .cookie-card { border:1.5px solid #e8f0ee; border-radius:16px; padding:1.75rem 2rem; margin-bottom:1.25rem; transition:border-color 0.3s, box-shadow 0.3s; background:#fff; }
+    .cookie-card:hover { border-color:var(--mint); box-shadow:0 4px 20px rgba(91,200,175,0.1); }
+    .cookie-card-header { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; margin-bottom:1rem; }
+    .cookie-card-title { display:flex; align-items:center; gap:0.75rem; }
+    .cookie-icon { width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+    .cookie-icon.necessary { background:#E8F8F5; }
+    .cookie-icon.analytics { background:#FFF3E0; }
+    .cookie-icon.marketing { background:#FCE4EC; }
+    .cookie-card h2 { font-size:1.05rem; font-weight:700; color:var(--dark); }
+    .cookie-card .badge { display:inline-block; font-size:0.72rem; font-weight:600; padding:0.2rem 0.65rem; border-radius:20px; margin-top:0.25rem; }
+    .badge-required { background:#E8F8F5; color:var(--mint-dark); }
+    .badge-optional { background:#f5f5f5; color:var(--gray); }
+    .cookie-card p { color:var(--gray); font-size:0.9rem; line-height:1.7; margin-bottom:1rem; }
+    .cookie-details { font-size:0.82rem; color:var(--gray); border-top:1px solid #eee; padding-top:0.9rem; }
+    .cookie-details table { width:100%; border-collapse:collapse; }
+    .cookie-details th { text-align:left; padding:0.35rem 0.5rem; font-weight:600; color:var(--dark); font-size:0.8rem; border-bottom:1px solid #eee; }
+    .cookie-details td { padding:0.35rem 0.5rem; color:var(--gray); font-size:0.8rem; border-bottom:1px solid #f5f5f5; }
+
+    /* Toggle switch */
+    .toggle-wrap { display:flex; align-items:center; gap:0.6rem; flex-shrink:0; }
+    .toggle-label { font-size:0.82rem; font-weight:600; color:var(--gray); white-space:nowrap; }
+    .toggle { position:relative; width:50px; height:28px; }
+    .toggle input { opacity:0; width:0; height:0; }
+    .toggle-slider { position:absolute; cursor:pointer; inset:0; background:#dde4e2; border-radius:28px; transition:background 0.3s; }
+    .toggle-slider::before { content:''; position:absolute; height:20px; width:20px; left:4px; bottom:4px; background:white; border-radius:50%; transition:transform 0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.2); }
+    .toggle input:checked + .toggle-slider { background:var(--mint); }
+    .toggle input:checked + .toggle-slider::before { transform:translateX(22px); }
+    .toggle input:disabled + .toggle-slider { cursor:not-allowed; opacity:0.7; }
+
+    /* Action buttons */
+    .cookie-actions { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; padding-top:2rem; border-top:1px solid #eee; }
+    .btn-save { background:var(--mint); color:white; border:none; padding:0.85rem 2rem; border-radius:50px; font-size:0.95rem; font-weight:700; cursor:pointer; transition:background 0.2s, transform 0.2s; }
+    .btn-save:hover { background:var(--mint-dark); transform:translateY(-2px); }
+    .btn-accept-all { background:var(--dark); color:white; border:none; padding:0.85rem 2rem; border-radius:50px; font-size:0.95rem; font-weight:700; cursor:pointer; transition:background 0.2s, transform 0.2s; }
+    .btn-accept-all:hover { background:#0d1f1c; transform:translateY(-2px); }
+    .btn-reject-optional { background:transparent; color:var(--gray); border:1.5px solid #dde4e2; padding:0.85rem 2rem; border-radius:50px; font-size:0.95rem; font-weight:600; cursor:pointer; transition:border-color 0.2s, color 0.2s; }
+    .btn-reject-optional:hover { border-color:var(--mint); color:var(--mint-dark); }
+
+    /* Toast */
+    .toast { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(100px); background:var(--dark); color:white; padding:0.85rem 2rem; border-radius:50px; font-size:0.9rem; font-weight:600; opacity:0; transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s; z-index:999; pointer-events:none; display:flex; align-items:center; gap:0.6rem; }
+    .toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+    .toast-icon { width:20px; height:20px; background:var(--mint); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.75rem; }
+
+    /* Legal note */
+    .legal-note { margin-top:3rem; padding-top:2rem; border-top:1px solid #eee; }
+    .legal-note h3 { font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--dark); }
+    .legal-note p { color:var(--gray); font-size:0.88rem; line-height:1.7; margin-bottom:0.6rem; }
+    .legal-note a { color:var(--mint-dark); }
+
+    footer { background:var(--dark); padding:4rem 3rem 2rem; color:rgba(255,255,255,0.65); }
+    .footer-grid { max-width:1200px; margin:0 auto 3rem; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; }
+    .footer-brand img { height:48px; margin-bottom:1rem; filter:brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size:0.9rem; line-height:1.65; max-width:260px; }
+    .footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1.25rem; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--mint); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.85rem; }
+    .footer-badge { display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.06); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; }
+    @media (max-width:900px) { nav { padding:1rem 1.5rem; } .nav-links { display:none; } .page-hero { padding:6rem 1.5rem 2.5rem; } .cookie-wrap { padding:3rem 1.5rem 5rem; } .footer-grid { grid-template-columns:1fr 1fr; } .cookie-actions { flex-direction:column; } .cookie-actions button { width:100%; } }
+  
+    /* ─── LANG SWITCHER ─── */
+    .lang-switcher { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.35rem;
+      background: transparent;
+      border: 1.5px solid rgba(91,200,175,0.45);
+      border-radius: 50px; padding: 0.45rem 0.95rem;
+      cursor: pointer; font-size: 0.88rem; font-weight: 600;
+      color: var(--dark); transition: all 0.2s; white-space: nowrap;
+    }
+    .lang-btn:hover { border-color: var(--mint); background: var(--mint-pale); }
+    .lang-dropdown {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      background: white; border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      padding: 0.5rem; width: 380px; display: none; z-index: 200;
+      border: 1px solid rgba(91,200,175,0.15);
+    }
+    .lang-dropdown.open { display: grid; grid-template-columns: 1fr 1fr; animation: dropIn 0.18s ease; }
+    @keyframes dropIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .lang-option {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.6rem 0.85rem; border-radius: 10px;
+      cursor: pointer; font-size: 0.88rem; font-weight: 500;
+      color: var(--dark); transition: background 0.15s;
+    }
+    .lang-option:hover { background: var(--mint-pale); }
+    .lang-option.active { background: var(--mint-pale); color: var(--mint-dark); font-weight: 600; }
+    @media (max-width: 600px) { .lang-dropdown { width: 260px; } }
+
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div class="nav-logo"><a href="/"><img src="/logo.png" alt="SMILE and CARE" /></a></div>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nav.home">Start</a></li>
+      <li><a href="/#products" data-i18n="nav.products">Produkte</a></li>
+      <li><a href="/ueber-uns" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="/kontakt" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="#" class="nav-cta" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 <span style="font-size:0.7rem;opacity:.7">▾</span></button>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</div>
+        <div class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</div>
+        <div class="lang-option" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</div>
+        <div class="lang-option" data-lang="es" onclick="setLang('es')">🇪🇸 Español</div>
+        <div class="lang-option" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</div>
+        <div class="lang-option" data-lang="el" onclick="setLang('el')">🇬🇷 Ελληνικά</div>
+        <div class="lang-option" data-lang="bg" onclick="setLang('bg')">🇧🇬 Български</div>
+        <div class="lang-option" data-lang="hr" onclick="setLang('hr')">🇭🇷 Hrvatski</div>
+        <div class="lang-option" data-lang="pl" onclick="setLang('pl')">🇵🇱 Polski</div>
+        <div class="lang-option" data-lang="ro" onclick="setLang('ro')">🇷🇴 Română</div>
+        <div class="lang-option" data-lang="sr" onclick="setLang('sr')">🇷🇸 Srpski</div>
+        <div class="lang-option" data-lang="sq" onclick="setLang('sq')">🇦🇱 Shqip</div>
+        <div class="lang-option" data-lang="uk" onclick="setLang('uk')">🇺🇦 Українська</div>
+        <div class="lang-option" data-lang="ru" onclick="setLang('ru')">🇷🇺 Русский</div>
+        <div class="lang-option" data-lang="tr" onclick="setLang('tr')">🇹🇷 Türkçe</div>
+        <div class="lang-option" data-lang="ar" onclick="setLang('ar')">🇸🇦 العربية</div>
+        <div class="lang-option" data-lang="fa" onclick="setLang('fa')">🇮🇷 فارسی</div>
+        <div class="lang-option" data-lang="tw" onclick="setLang('tw')">🇬🇭 Twi</div>
+        <div class="lang-option" data-lang="vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="/">Home</a> <span>›</span> <span>Cookie-Einstellungen</span></div>
+      <h1>Cookie-Einstellungen</h1>
+      <p>Verwalten Sie Ihre Datenschutzpräferenzen – jederzeit anpassbar.</p>
+    </div>
+  </div>
+
+  <div class="cookie-wrap">
+    <div class="info-box">
+      <p>🍪 <strong>Wir respektieren Ihre Privatsphäre.</strong> Cookies helfen uns, unsere Website sicher und funktionsfähig zu halten und Ihnen ein besseres Erlebnis zu bieten. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Technisch notwendige Cookies können nicht deaktiviert werden, da sie für den Betrieb der Website unerlässlich sind.</p>
+    </div>
+
+    <!-- Necessary Cookies -->
+    <div class="cookie-card">
+      <div class="cookie-card-header">
+        <div class="cookie-card-title">
+          <div class="cookie-icon necessary">🔒</div>
+          <div>
+            <h2>Notwendige Cookies</h2>
+            <span class="badge badge-required">Immer aktiv</span>
+          </div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label">Aktiv</span>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-necessary" checked disabled />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      <p>Diese Cookies sind für den ordnungsgemäßen Betrieb der Website unbedingt erforderlich. Sie ermöglichen grundlegende Funktionen wie Seitennavigation, Sicherheit und den Zugang zu geschützten Bereichen. Die Website kann ohne diese Cookies nicht korrekt funktionieren.</p>
+      <div class="cookie-details">
+        <table>
+          <tr><th>Name</th><th>Anbieter</th><th>Zweck</th><th>Laufzeit</th></tr>
+          <tr><td>session_id</td><td>smileandcare.eu</td><td>Sitzungsverwaltung</td><td>Sitzung</td></tr>
+          <tr><td>csrf_token</td><td>smileandcare.eu</td><td>Schutz vor Cross-Site-Anfragen</td><td>Sitzung</td></tr>
+          <tr><td>cookie_consent</td><td>smileandcare.eu</td><td>Speicherung Ihrer Cookie-Einstellungen</td><td>1 Jahr</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Analytics Cookies -->
+    <div class="cookie-card">
+      <div class="cookie-card-header">
+        <div class="cookie-card-title">
+          <div class="cookie-icon analytics">📊</div>
+          <div>
+            <h2>Analyse-Cookies</h2>
+            <span class="badge badge-optional">Optional</span>
+          </div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="label-analytics">Inaktiv</span>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-analytics" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      <p>Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren. Wir erhalten anonymisierte Daten darüber, welche Seiten am häufigsten besucht werden und wie Nutzer durch die Website navigieren – so können wir unser Angebot kontinuierlich verbessern.</p>
+      <div class="cookie-details">
+        <table>
+          <tr><th>Name</th><th>Anbieter</th><th>Zweck</th><th>Laufzeit</th></tr>
+          <tr><td>_ga</td><td>Google Analytics</td><td>Unterscheidung von Nutzern</td><td>2 Jahre</td></tr>
+          <tr><td>_ga_*</td><td>Google Analytics</td><td>Sitzungsstatus</td><td>2 Jahre</td></tr>
+          <tr><td>_gid</td><td>Google Analytics</td><td>Unterscheidung von Nutzern</td><td>24 Stunden</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Marketing Cookies -->
+    <div class="cookie-card">
+      <div class="cookie-card-header">
+        <div class="cookie-card-title">
+          <div class="cookie-icon marketing">🎯</div>
+          <div>
+            <h2>Marketing-Cookies</h2>
+            <span class="badge badge-optional">Optional</span>
+          </div>
+        </div>
+        <div class="toggle-wrap">
+          <span class="toggle-label" id="label-marketing">Inaktiv</span>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-marketing" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+      <p>Marketing-Cookies werden verwendet, um Ihnen relevante Werbung anzuzeigen und die Effektivität unserer Werbekampagnen zu messen. Sie ermöglichen es, Ihnen auf anderen Websites zielgerichtete Inhalte rund um Zahnzusatzversicherungen anzubieten.</p>
+      <div class="cookie-details">
+        <table>
+          <tr><th>Name</th><th>Anbieter</th><th>Zweck</th><th>Laufzeit</th></tr>
+          <tr><td>_fbp</td><td>Meta (Facebook)</td><td>Conversion-Tracking</td><td>3 Monate</td></tr>
+          <tr><td>ads/ga-audiences</td><td>Google Ads</td><td>Remarketing</td><td>Sitzung</td></tr>
+          <tr><td>li_fat_id</td><td>LinkedIn</td><td>Conversion-Tracking</td><td>30 Tage</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="cookie-actions">
+      <button class="btn-save" onclick="saveSettings()">Auswahl speichern</button>
+      <button class="btn-accept-all" onclick="acceptAll()">Alle akzeptieren</button>
+      <button class="btn-reject-optional" onclick="rejectOptional()">Nur notwendige Cookies</button>
+    </div>
+
+    <!-- Legal Note -->
+    <div class="legal-note">
+      <h3>Mehr Informationen</h3>
+      <p>Weitere Informationen zur Verwendung von Cookies und zur Verarbeitung Ihrer personenbezogenen Daten finden Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
+      <p>Rechtsgrundlage für notwendige Cookies: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Für optionale Cookies: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie diese Seite erneut aufrufen und Ihre Einstellungen anpassen.</p>
+      <p>Bei Fragen zum Datenschutz wenden Sie sich an: <a href="mailto:datenschutz@smileandcare.eu">datenschutz@smileandcare.eu</a></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <div class="toast-icon">✓</div>
+    <span id="toast-msg">Einstellungen gespeichert</span>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/"><img src="/logo.png" alt="Smile &amp; Care" /></a><p data-i18n="footer.brand">Ihr unabhängiger Versicherungspartner in Deutschland. Wir vergleichen alle führenden Versicherer – kostenlos und ohne Verpflichtung.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col2.title">Unternehmen</h4><ul><li><a href="/ueber-uns" data-i18n="footer.col2.l1">Über uns</a></li><li><a href="/kontakt" data-i18n="footer.col2.l2">Kontakt</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col3.title">Rechtliches</h4><ul><li><a href="/impressum" data-i18n="footer.col3.l1">Impressum</a></li><li><a href="/datenschutz" data-i18n="footer.col3.l2">Datenschutz</a></li><li><a href="/agb" data-i18n="footer.col3.l3">AGB</a></li><li><a href="/cookie-einstellungen" data-i18n="footer.col3.l4">Cookie-Einstellungen</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 SMILE and CARE Versicherungsvermittlungsgesellschaft mbH. Alle Rechte vorbehalten.</p></div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60));
+
+    // Update toggle labels
+    document.getElementById('toggle-analytics').addEventListener('change', function() {
+      document.getElementById('label-analytics').textContent = this.checked ? 'Aktiv' : 'Inaktiv';
+    });
+    document.getElementById('toggle-marketing').addEventListener('change', function() {
+      document.getElementById('label-marketing').textContent = this.checked ? 'Aktiv' : 'Inaktiv';
+    });
+
+    // Load saved preferences
+    (function() {
+      try {
+        const saved = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
+        if (saved.analytics) {
+          document.getElementById('toggle-analytics').checked = true;
+          document.getElementById('label-analytics').textContent = 'Aktiv';
+        }
+        if (saved.marketing) {
+          document.getElementById('toggle-marketing').checked = true;
+          document.getElementById('label-marketing').textContent = 'Aktiv';
+        }
+      } catch(e) {}
+    })();
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    function saveSettings() {
+      const prefs = {
+        necessary: true,
+        analytics: document.getElementById('toggle-analytics').checked,
+        marketing: document.getElementById('toggle-marketing').checked,
+        timestamp: new Date().toISOString()
+      };
+      localStorage.setItem('cookieConsent', JSON.stringify(prefs));
+      showToast('Ihre Einstellungen wurden gespeichert.');
+    }
+
+    function acceptAll() {
+      document.getElementById('toggle-analytics').checked = true;
+      document.getElementById('toggle-marketing').checked = true;
+      document.getElementById('label-analytics').textContent = 'Aktiv';
+      document.getElementById('label-marketing').textContent = 'Aktiv';
+      const prefs = { necessary: true, analytics: true, marketing: true, timestamp: new Date().toISOString() };
+      localStorage.setItem('cookieConsent', JSON.stringify(prefs));
+      showToast('Alle Cookies akzeptiert. Danke!');
+    }
+
+    function rejectOptional() {
+      document.getElementById('toggle-analytics').checked = false;
+      document.getElementById('toggle-marketing').checked = false;
+      document.getElementById('label-analytics').textContent = 'Inaktiv';
+      document.getElementById('label-marketing').textContent = 'Inaktiv';
+      const prefs = { necessary: true, analytics: false, marketing: false, timestamp: new Date().toISOString() };
+      localStorage.setItem('cookieConsent', JSON.stringify(prefs));
+      showToast('Nur notwendige Cookies aktiv.');
+    }
+  </script>
+  <script src="/config.js"></script>
+  <script src="/translations.js"></script>
+</body>
+</html>

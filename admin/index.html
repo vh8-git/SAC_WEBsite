@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Admin – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-light:#A8E6D9; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:1.5rem; list-style:none; align-items:center; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .btn-logout { background:transparent; border:1.5px solid rgba(91,200,175,0.4); color:var(--dark); padding:0.45rem 1rem; border-radius:50px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:all 0.2s; }
+    .btn-logout:hover { border-color:var(--mint); background:var(--mint-pale); }
+
+    .page-hero { padding:9rem 3rem 4rem; background:linear-gradient(135deg,var(--mint-pale) 0%,white 55%,#d4f5ee 100%); position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(91,200,175,0.12) 0%,transparent 70%); top:-250px; right:-150px; pointer-events:none; }
+    .page-hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-label { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(91,200,175,0.12); border:1px solid rgba(91,200,175,0.3); color:var(--mint-dark); padding:0.4rem 1rem; border-radius:50px; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; }
+    .page-hero h1 { font-size:clamp(2.2rem,5vw,3.2rem); font-weight:800; letter-spacing:-0.02em; line-height:1.1; margin-bottom:1.25rem; }
+    .page-hero h1 span { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-hero p { font-size:1.05rem; color:var(--gray); line-height:1.7; max-width:640px; }
+
+    .content-section { padding:4rem 3rem; }
+    .content-inner { max-width:900px; margin:0 auto; }
+
+    .lang-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1rem; }
+    .lang-card { display:flex; align-items:center; justify-content:space-between; background:white; border:1.5px solid #e8f0ee; border-radius:14px; padding:1rem 1.25rem; transition:border-color 0.2s, box-shadow 0.2s; }
+    .lang-card:hover { border-color:var(--mint-light); box-shadow:0 4px 16px rgba(91,200,175,0.1); }
+    .lang-card.locked { background:var(--mint-pale); border-color:rgba(91,200,175,0.3); }
+    .lang-info { display:flex; align-items:center; gap:0.75rem; }
+    .lang-flag { font-size:1.5rem; }
+    .lang-name { font-weight:600; font-size:0.95rem; }
+    .lang-code { font-size:0.78rem; color:var(--gray); font-weight:500; text-transform:uppercase; letter-spacing:0.05em; }
+    .lang-lock { font-size:0.75rem; color:var(--mint-dark); font-weight:600; background:rgba(91,200,175,0.15); padding:0.25rem 0.6rem; border-radius:50px; }
+
+    .toggle { position:relative; width:48px; height:26px; flex-shrink:0; }
+    .toggle input { opacity:0; width:0; height:0; }
+    .toggle-slider { position:absolute; inset:0; cursor:pointer; background:#ccc; border-radius:26px; transition:background 0.3s; }
+    .toggle-slider::before { content:''; position:absolute; width:20px; height:20px; left:3px; bottom:3px; background:white; border-radius:50%; transition:transform 0.3s; box-shadow:0 2px 4px rgba(0,0,0,0.15); }
+    .toggle input:checked + .toggle-slider { background:var(--mint); }
+    .toggle input:checked + .toggle-slider::before { transform:translateX(22px); }
+
+    .toast { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(100px); background:var(--dark); color:white; padding:0.85rem 1.75rem; border-radius:50px; font-weight:600; font-size:0.9rem; box-shadow:0 8px 30px rgba(0,0,0,0.2); opacity:0; transition:transform 0.35s, opacity 0.35s; z-index:500; pointer-events:none; }
+    .toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+
+    footer { text-align:center; padding:3rem; color:var(--gray); font-size:0.85rem; border-top:1px solid #e8f0ee; }
+    footer a { color:var(--mint-dark); text-decoration:none; }
+
+    @media (max-width:768px) {
+      nav { padding:1rem 1.5rem; }
+      .nav-links { display:none; }
+      .page-hero { padding:7rem 1.5rem 3rem; }
+      .content-section { padding:3rem 1.5rem; }
+      .lang-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── PASSWORD GATE ─── -->
+  <div id="authGate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,var(--mint-pale) 0%,white 55%,#d4f5ee 100%);">
+    <div style="background:white;border-radius:20px;padding:2.5rem;max-width:380px;width:90%;box-shadow:0 10px 40px rgba(91,200,175,0.15);text-align:center;">
+      <img src="/logo.png" alt="Smile & Care" style="height:40px;margin-bottom:1.5rem;" />
+      <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:0.5rem;">Admin-Bereich</h2>
+      <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1.5rem;">Bitte Passwort eingeben</p>
+      <input type="password" id="authInput" placeholder="Passwort" style="width:100%;padding:0.7rem 1rem;border:1.5px solid #e8f0ee;border-radius:10px;font-size:0.95rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--mint)'" onblur="this.style.borderColor='#e8f0ee'" />
+      <p id="authError" style="color:#e74c3c;font-size:0.8rem;margin-top:0.5rem;display:none;">Falsches Passwort</p>
+      <button onclick="checkAuth()" style="width:100%;margin-top:1rem;background:var(--mint);color:white;border:none;padding:0.7rem;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:pointer;box-shadow:0 4px 16px rgba(91,200,175,0.3);transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Anmelden</button>
+    </div>
+  </div>
+
+  <script>
+    function checkAuth() {
+      var pw = document.getElementById('authInput').value;
+      if (pw === 'Access!') {
+        sessionStorage.setItem('sc_admin_auth', '1');
+        document.getElementById('authGate').style.display = 'none';
+        document.getElementById('adminContent').style.display = 'block';
+      } else {
+        document.getElementById('authError').style.display = 'block';
+        document.getElementById('authInput').style.borderColor = '#e74c3c';
+      }
+    }
+    function logout() {
+      sessionStorage.removeItem('sc_admin_auth');
+      document.getElementById('adminContent').style.display = 'none';
+      document.getElementById('authGate').style.display = 'flex';
+      document.getElementById('authInput').value = '';
+      document.getElementById('authError').style.display = 'none';
+    }
+    document.getElementById('authInput').addEventListener('keydown', function(e) { if (e.key === 'Enter') checkAuth(); });
+    // Auto-unlock if already authenticated this session
+    if (sessionStorage.getItem('sc_admin_auth') === '1') {
+      document.getElementById('authGate').style.display = 'none';
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('adminContent').style.display = 'block';
+      });
+    }
+  </script>
+
+  <!-- ─── ADMIN CONTENT (hidden until authenticated) ─── -->
+  <div id="adminContent" style="display:none;">
+
+    <nav>
+      <div class="nav-logo">
+        <a href="/"><img src="/logo.png" alt="Smile & Care" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Start</a></li>
+        <li><button class="btn-logout" onclick="logout()">Abmelden</button></li>
+      </ul>
+    </nav>
+
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="page-breadcrumb"><a href="/">Home</a> <span>/</span> Admin</div>
+        <div class="page-label">Backend</div>
+        <h1>Sprach<span>verwaltung</span></h1>
+        <p>Aktivieren oder deaktivieren Sie Sprachen für die Website. Deutsch und Englisch sind immer aktiv und können nicht deaktiviert werden.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="content-inner">
+        <div class="lang-grid" id="langGrid"></div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast">Saved</div>
+
+    <footer>
+      <p>&copy; 2026 SMILE and CARE Versicherungsvermittlungsgesellschaft mbH &nbsp;|&nbsp; <a href="/">Back to website</a></p>
+    </footer>
+
+  </div><!-- /adminContent -->
+
+  <script src="/translations.js"></script>
+  <script>
+    const ALWAYS_ON = ['de', 'en'];
+
+    function getEnabledLangs() {
+      const stored = localStorage.getItem('sc_enabled_langs');
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          ALWAYS_ON.forEach(c => { if (!parsed.includes(c)) parsed.push(c); });
+          return parsed;
+        } catch (e) {}
+      }
+      return Object.keys(LANGS);
+    }
+
+    function saveEnabledLangs(list) {
+      localStorage.setItem('sc_enabled_langs', JSON.stringify(list));
+      showToast();
+    }
+
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+
+    function buildGrid() {
+      const grid = document.getElementById('langGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      const enabled = getEnabledLangs();
+
+      Object.entries(LANGS).forEach(([code, lang]) => {
+        const isLocked = ALWAYS_ON.includes(code);
+        const isOn = enabled.includes(code);
+
+        const card = document.createElement('div');
+        card.className = 'lang-card' + (isLocked ? ' locked' : '');
+
+        if (isLocked) {
+          card.innerHTML = `
+            <div class="lang-info">
+              <span class="lang-flag">${lang.flag}</span>
+              <div>
+                <div class="lang-name">${lang.name}</div>
+                <div class="lang-code">${code}</div>
+              </div>
+            </div>
+            <span class="lang-lock">Always on</span>
+          `;
+        } else {
+          card.innerHTML = `
+            <div class="lang-info">
+              <span class="lang-flag">${lang.flag}</span>
+              <div>
+                <div class="lang-name">${lang.name}</div>
+                <div class="lang-code">${code}</div>
+              </div>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" data-lang="${code}" ${isOn ? 'checked' : ''} />
+              <span class="toggle-slider"></span>
+            </label>
+          `;
+
+          card.querySelector('input').addEventListener('change', (e) => {
+            const current = getEnabledLangs();
+            if (e.target.checked) {
+              if (!current.includes(code)) current.push(code);
+            } else {
+              const idx = current.indexOf(code);
+              if (idx > -1) current.splice(idx, 1);
+            }
+            saveEnabledLangs(current);
+          });
+        }
+
+        grid.appendChild(card);
+      });
+    }
+
+    // Build grid when DOM is ready (ensures langGrid element exists)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', buildGrid);
+    } else {
+      buildGrid();
+    }
+  </script>
+</body>
+</html>

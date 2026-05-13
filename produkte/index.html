@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Unsere Leistungen – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-light:#A8E6D9; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); transition:box-shadow 0.3s; }
+    nav.scrolled { box-shadow:0 2px 30px rgba(91,200,175,0.2); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--mint); transition:width 0.3s; border-radius:2px; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { background:var(--mint) !important; color:white !important; padding:0.6rem 1.5rem; border-radius:50px; font-weight:600 !important; box-shadow:0 4px 20px rgba(91,200,175,0.35); transition:transform 0.2s, box-shadow 0.2s !important; }
+    .nav-cta::after { display:none !important; }
+    .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(91,200,175,0.45) !important; }
+
+    .btn-primary { display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(135deg,var(--mint),var(--mint-dark)); color:white; padding:1rem 2.2rem; border-radius:50px; font-weight:700; font-size:1.05rem; text-decoration:none; box-shadow:0 8px 30px rgba(91,200,175,0.4); transition:transform 0.25s,box-shadow 0.25s; }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(91,200,175,0.5); }
+
+    .page-hero { padding:9rem 3rem 5rem; background:linear-gradient(135deg,var(--mint-pale) 0%,white 55%,#d4f5ee 100%); position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(91,200,175,0.12) 0%,transparent 70%); top:-250px; right:-150px; pointer-events:none; }
+    .page-hero-inner { max-width:900px; margin:0 auto; position:relative; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-label { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(91,200,175,0.12); border:1px solid rgba(91,200,175,0.3); color:var(--mint-dark); padding:0.4rem 1rem; border-radius:50px; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; }
+    .page-hero h1 { font-size:clamp(2.2rem,5vw,3.8rem); font-weight:800; letter-spacing:-0.02em; line-height:1.1; margin-bottom:1.25rem; }
+    .page-hero h1 span { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .page-hero p { font-size:1.1rem; color:var(--gray); line-height:1.7; max-width:640px; }
+
+    .content-section { padding:6rem 3rem; }
+    .content-section.alt { background:var(--gray-light); }
+    .content-inner { max-width:1100px; margin:0 auto; }
+    .section-label { color:var(--mint); font-weight:700; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+    .section-title { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:1rem; line-height:1.2; }
+    .section-sub { color:var(--gray); font-size:1.05rem; max-width:600px; line-height:1.7; margin-bottom:3rem; }
+
+    .products-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .product-card { background:white; border-radius:20px; padding:2rem 1.75rem; box-shadow:0 4px 25px rgba(91,200,175,0.07); border-left:4px solid var(--mint); transition:transform 0.3s,box-shadow 0.3s; }
+    .product-card:hover { transform:translateY(-5px); box-shadow:0 14px 45px rgba(91,200,175,0.14); }
+    .product-icon { font-size:2rem; margin-bottom:1rem; }
+    .product-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:0.5rem; }
+    .product-card p { color:var(--gray); font-size:0.93rem; line-height:1.65; }
+
+    .note-box { background:var(--mint-pale); border:1px solid rgba(91,200,175,0.3); border-radius:16px; padding:1.5rem 2rem; margin-top:2.5rem; text-align:center; color:var(--dark); font-size:0.97rem; line-height:1.7; }
+
+    .pkv-criteria { display:flex; flex-direction:column; gap:1rem; }
+    .pkv-item { display:flex; align-items:flex-start; gap:1rem; background:white; border-radius:14px; padding:1.25rem 1.5rem; border:1.5px solid #e8f0ee; transition:border-color 0.2s, box-shadow 0.2s; }
+    .pkv-item:hover { border-color:var(--mint-light); box-shadow:0 4px 16px rgba(91,200,175,0.08); }
+    .pkv-item strong { display:block; font-size:1rem; margin-bottom:0.2rem; }
+    .pkv-item p { color:var(--gray); font-size:0.9rem; line-height:1.5; margin:0; }
+    .pkv-check { font-size:1.3rem; font-weight:800; color:var(--mint-dark); min-width:28px; text-align:center; line-height:1.5; }
+    .pkv-cross { font-size:1.3rem; font-weight:800; color:#d35; min-width:28px; text-align:center; line-height:1.5; }
+    .pkv-no { border-color:rgba(221,51,85,0.15); background:rgba(221,51,85,0.02); }
+
+    .cta-band { background:linear-gradient(135deg,var(--mint-dark),var(--mint)); padding:5rem 3rem; text-align:center; }
+    .cta-band h2 { font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; color:white; margin-bottom:1rem; }
+    .cta-band p { color:rgba(255,255,255,0.85); font-size:1.05rem; margin-bottom:2rem; }
+    .btn-white { display:inline-flex; align-items:center; gap:0.5rem; background:white; color:var(--mint-dark); padding:1rem 2.4rem; border-radius:50px; font-weight:800; font-size:1.05rem; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.12); transition:transform 0.25s,box-shadow 0.25s; }
+    .btn-white:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(0,0,0,0.18); }
+
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+    .reveal-delay-3 { transition-delay:0.3s; }
+
+    footer { background:var(--dark); padding:4rem 3rem 2rem; color:rgba(255,255,255,0.65); }
+    .footer-grid { max-width:1200px; margin:0 auto 3rem; display:grid; grid-template-columns:2fr 1fr 1fr; gap:3rem; }
+    .footer-brand img { height:48px; margin-bottom:1rem; filter:brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size:0.9rem; line-height:1.65; max-width:260px; }
+    .footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1.25rem; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--mint); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.85rem; }
+
+    @media (max-width:900px) {
+      nav { padding:1rem 1.5rem; } .nav-links { display:none; }
+      .page-hero { padding:7rem 1.5rem 4rem; } .content-section { padding:4rem 1.5rem; }
+      .products-grid { grid-template-columns:1fr; }
+      #pkv .content-inner > div { grid-template-columns:1fr !important; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+  
+    /* ─── LANG SWITCHER ─── */
+    .lang-switcher { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.35rem;
+      background: transparent;
+      border: 1.5px solid rgba(91,200,175,0.45);
+      border-radius: 50px; padding: 0.45rem 0.95rem;
+      cursor: pointer; font-size: 0.88rem; font-weight: 600;
+      color: var(--dark); transition: all 0.2s; white-space: nowrap;
+    }
+    .lang-btn:hover { border-color: var(--mint); background: var(--mint-pale); }
+    .lang-dropdown {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      background: white; border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      padding: 0.5rem; width: 380px; display: none; z-index: 200;
+      border: 1px solid rgba(91,200,175,0.15);
+    }
+    .lang-dropdown.open { display: grid; grid-template-columns: 1fr 1fr; animation: dropIn 0.18s ease; }
+    @keyframes dropIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .lang-option {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.6rem 0.85rem; border-radius: 10px;
+      cursor: pointer; font-size: 0.88rem; font-weight: 500;
+      color: var(--dark); transition: background 0.15s;
+    }
+    .lang-option:hover { background: var(--mint-pale); }
+    .lang-option.active { background: var(--mint-pale); color: var(--mint-dark); font-weight: 600; }
+    @media (max-width: 600px) { .lang-dropdown { width: 260px; } }
+
+  </style>
+</head>
+<body>
+
+  <nav id="mainNav">
+    <div class="nav-logo"><a href="/"><img src="/logo.png" alt="SMILE and CARE" /></a></div>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nav.home">Start</a></li>
+      <li><a href="/#products" data-i18n="nav.products">Produkte</a></li>
+      <li><a href="/ueber-uns" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="/kontakt" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="#" class="nav-cta" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 <span style="font-size:0.7rem;opacity:.7">▾</span></button>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</div>
+        <div class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</div>
+        <div class="lang-option" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</div>
+        <div class="lang-option" data-lang="es" onclick="setLang('es')">🇪🇸 Español</div>
+        <div class="lang-option" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</div>
+        <div class="lang-option" data-lang="el" onclick="setLang('el')">🇬🇷 Ελληνικά</div>
+        <div class="lang-option" data-lang="bg" onclick="setLang('bg')">🇧🇬 Български</div>
+        <div class="lang-option" data-lang="hr" onclick="setLang('hr')">🇭🇷 Hrvatski</div>
+        <div class="lang-option" data-lang="pl" onclick="setLang('pl')">🇵🇱 Polski</div>
+        <div class="lang-option" data-lang="ro" onclick="setLang('ro')">🇷🇴 Română</div>
+        <div class="lang-option" data-lang="sr" onclick="setLang('sr')">🇷🇸 Srpski</div>
+        <div class="lang-option" data-lang="sq" onclick="setLang('sq')">🇦🇱 Shqip</div>
+        <div class="lang-option" data-lang="uk" onclick="setLang('uk')">🇺🇦 Українська</div>
+        <div class="lang-option" data-lang="ru" onclick="setLang('ru')">🇷🇺 Русский</div>
+        <div class="lang-option" data-lang="tr" onclick="setLang('tr')">🇹🇷 Türkçe</div>
+        <div class="lang-option" data-lang="ar" onclick="setLang('ar')">🇸🇦 العربية</div>
+        <div class="lang-option" data-lang="fa" onclick="setLang('fa')">🇮🇷 فارسی</div>
+        <div class="lang-option" data-lang="tw" onclick="setLang('tw')">🇬🇭 Twi</div>
+        <div class="lang-option" data-lang="vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="/">Home</a> <span>/</span> <span>Produkte</span></div>
+      <div class="page-label" data-i18n="prod.hero.label">Unsere Leistungen</div>
+      <h1 data-i18n="prod.hero.h1">Unsere <span>Produkte</span></h1>
+      <p data-i18n="prod.hero.sub">Wir vermitteln Versicherungen führender Anbieter – unabhängig und auf Ihre Bedürfnisse zugeschnitten.</p>
+    </div>
+  </section>
+
+  <section class="content-section alt" id="zahnzusatz">
+    <div class="content-inner">
+      <div class="section-label" style="text-align:center">Produkt 1</div>
+      <h2 class="section-title" style="text-align:center" data-i18n="products.c1.title">Zahnzusatzversicherung</h2>
+      <p class="section-sub" style="margin:0 auto 3rem;text-align:center" data-i18n="prod.zahn.sub">Wir finden den passenden Zahnzusatztarif für Sie — von führenden deutschen Versicherern.</p>
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-icon">🦷</div>
+          <h3 data-i18n="prod.zahn.p1.h3">Zahnersatz</h3>
+          <p data-i18n="prod.zahn.p1.p">Kronen, Brücken und Prothesen bis zu 100% abgesichert.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-icon">🔩</div>
+          <h3 data-i18n="prod.zahn.p2.h3">Implantate</h3>
+          <p data-i18n="prod.zahn.p2.p">Hochwertiger Zahnersatz durch Implantate — vollständig versichert.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-icon">🔧</div>
+          <h3 data-i18n="feat.f2.title">Kieferorthopädie</h3>
+          <p data-i18n="prod.zahn.p3.p">Brackets, Aligner &amp; Co. für Kinder und Erwachsene.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-icon">✨</div>
+          <h3 data-i18n="feat.f3.title">Professionelle Zahnreinigung</h3>
+          <p data-i18n="prod.zahn.p4.p">Regelmäßige PZR-Behandlungen für strahlend weiße Zähne.</p>
+        </div>
+        <div class="product-card reveal">
+          <div class="product-icon">🪥</div>
+          <h3 data-i18n="feat.f5.title">Bleaching</h3>
+          <p data-i18n="prod.zahn.p5.p">Ästhetische Zahnaufhellung durch professionelles Bleaching.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-icon">💎</div>
+          <h3 data-i18n="feat.f6.title">Inlays</h3>
+          <p data-i18n="prod.zahn.p6.p">Hochwertige Inlays als langlebige Alternative zu Füllungen.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-icon">🦾</div>
+          <h3 data-i18n="feat.f7.title">Zahnschiene</h3>
+          <p data-i18n="prod.zahn.p7.p">Schutzschienen gegen Zähneknirschen und zur Korrektur.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-icon">💊</div>
+          <h3 data-i18n="prod.zahn.p8.h3">Zahnbehandlung</h3>
+          <p data-i18n="prod.zahn.p8.p">Füllungen, Wurzelbehandlungen und zahnärztliche Behandlungen.</p>
+        </div>
+      </div>
+      <div class="note-box reveal">
+        <span data-i18n="prod.zahn.note">Kein Preis wird online angezeigt — Ihr Tarif wird individuell nach Alter und Bedarf berechnet.</span>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="#" class="btn-primary" data-booking-link>Jetzt kostenlos beraten lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PKV SECTION ─── -->
+  <section id="pkv" style="padding:6rem 3rem;background:linear-gradient(135deg,var(--dark) 0%,#1f3d36 100%);color:white;">
+    <div class="content-inner">
+      <div class="section-label" style="color:var(--mint-light);text-align:center;">Produkt 2</div>
+      <h2 class="section-title" style="color:white;text-align:center;" data-i18n="pkv.title">Private Krankenversicherung (PKV)</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.7;max-width:700px;margin:0 auto 3rem;text-align:center;" data-i18n="prod.pkv.sub">Vollständiger Schutz — individuell und umfassend. Als Alternative zur gesetzlichen Krankenversicherung bietet die PKV umfassenden Schutz mit freier Arztwahl und ohne Wartezeiten.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:900px;margin:0 auto;">
+        <!-- Left: Who qualifies -->
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--mint-light);" data-i18n="pkv.who">Wer kann sich privat versichern?</h3>
+          <div class="pkv-criteria">
+            <div class="pkv-item pkv-yes reveal" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="pkv.check1">Selbstständige &amp; Freiberufler</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.c1.sub">Unabhängig vom Einkommen</p></div>
+            </div>
+            <div class="pkv-item pkv-yes reveal reveal-delay-1" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="pkv.check2">Beamte</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.c2.sub">Unabhängig vom Einkommen</p></div>
+            </div>
+            <div class="pkv-item pkv-yes reveal reveal-delay-2" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="pkv.check3">Angestellte über €77.400</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.c3.sub">Bruttojahreseinkommen 2026</p></div>
+            </div>
+            <div class="pkv-item pkv-no reveal reveal-delay-3" style="background:rgba(255,255,255,0.03);border-color:rgba(221,51,85,0.2);">
+              <span class="pkv-cross">✗</span>
+              <div><strong style="color:rgba(255,255,255,0.7);" data-i18n="prod.pkv.c4.s">Angestellte unter €77.400</strong><p style="color:rgba(255,255,255,0.45);" data-i18n="prod.pkv.c4.p">Müssen in der GKV bleiben</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Benefits -->
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--mint-light);" data-i18n="pkv.benefits">Ihre Vorteile mit der PKV</h3>
+          <div class="pkv-criteria">
+            <div class="pkv-item pkv-yes reveal" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="prod.pkv.b1.s">Chefarztbehandlung &amp; Einzelzimmer</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.b1.p">Im Krankenhaus</p></div>
+            </div>
+            <div class="pkv-item pkv-yes reveal reveal-delay-1" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="prod.pkv.b2.s">Vollständige Kostenübernahme</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.b2.p">Beim Arzt Ihrer Wahl</p></div>
+            </div>
+            <div class="pkv-item pkv-yes reveal reveal-delay-2" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="prod.pkv.b3.s">Keine Wartezeiten</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.b3.p">Bei Fachärzten</p></div>
+            </div>
+            <div class="pkv-item pkv-yes reveal reveal-delay-3" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+              <span class="pkv-check" style="color:var(--mint);">✓</span>
+              <div><strong style="color:white;" data-i18n="prod.pkv.b4.s">Umfassender Schutz</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.pkv.b4.p">Inkl. Zahn, Augen und mehr</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box reveal" style="margin-top:2.5rem;background:rgba(91,200,175,0.12);border-color:rgba(91,200,175,0.25);color:rgba(255,255,255,0.85);">
+        <span data-i18n="pkv.note">Nicht sicher ob Sie sich qualifizieren? Lassen Sie sich jetzt kostenlos beraten — wir prüfen Ihre Situation gemeinsam.</span>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="#" class="btn-white" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── AMBULANTE ZUSATZVERSICHERUNG ─── -->
+  <section class="content-section alt" id="ambulant">
+    <div class="content-inner">
+      <div class="section-label" style="text-align:center">Produkt 3</div>
+      <h2 class="section-title" style="text-align:center" data-i18n="products.c3.title">Ambulante Zusatzversicherung</h2>
+      <p class="section-sub" style="margin:0 auto 3rem;text-align:center" data-i18n="prod.amb.sub">Für gesetzlich Versicherte, die beim Arztbesuch wie Privatpatienten behandelt werden möchten.</p>
+
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-icon">👨‍⚕️</div>
+          <h3 data-i18n="prod.amb.p1.h3">Behandlung beim Facharzt</h3>
+          <p data-i18n="prod.amb.p1.p">Direkte Termine bei Spezialisten — ohne lange Wartezeiten.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-1">
+          <div class="product-icon">💊</div>
+          <h3 data-i18n="prod.amb.p2.h3">Rezeptpflichtige Arzneimittel</h3>
+          <p data-i18n="prod.amb.p2.p">Erstattung von Medikamenten, die die GKV nicht übernimmt.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-2">
+          <div class="product-icon">🧿</div>
+          <h3 data-i18n="prod.amb.p3.h3">Sehhilfen &amp; Brillen</h3>
+          <p data-i18n="prod.amb.p3.p">Zuschüsse für Brillen, Kontaktlinsen und Sehhilfen.</p>
+        </div>
+        <div class="product-card reveal reveal-delay-3">
+          <div class="product-icon">🌿</div>
+          <h3 data-i18n="prod.amb.p4.h3">Heilpraktiker &amp; Naturheilverfahren</h3>
+          <p data-i18n="prod.amb.p4.p">Erstattung alternativer Behandlungsmethoden.</p>
+        </div>
+      </div>
+
+      <div class="note-box reveal">
+        <span data-i18n="prod.amb.note">Ideal für gesetzlich Versicherte, die sich mehr Leistung und Komfort wünschen — ohne komplett in die PKV zu wechseln.</span>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="#" class="btn-primary" data-booking-link>Jetzt kostenlos beraten lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATIONÄRE ZUSATZVERSICHERUNG ─── -->
+  <section id="stationaer" style="padding:6rem 3rem;background:linear-gradient(135deg,var(--dark) 0%,#1f3d36 100%);color:white;">
+    <div class="content-inner">
+      <div class="section-label" style="color:var(--mint-light);text-align:center;">Produkt 4</div>
+      <h2 class="section-title" style="color:white;text-align:center;" data-i18n="products.c4.title">Stationäre Zusatzversicherung</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.7;max-width:700px;margin:0 auto 3rem;text-align:center;" data-i18n="prod.stat.sub">Für gesetzlich Versicherte: Erstklassiger Schutz im Krankenhaus — Einzelzimmer, Chefarztbehandlung und freie Krankenhauswahl.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:900px;margin:0 auto;">
+        <div class="pkv-item pkv-yes reveal" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+          <span class="pkv-check" style="color:var(--mint);">✓</span>
+          <div><strong style="color:white;" data-i18n="prod.stat.i1.s">Einzelzimmer</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.stat.i1.p">Privatsphäre und Komfort im Krankenhaus</p></div>
+        </div>
+        <div class="pkv-item pkv-yes reveal reveal-delay-1" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+          <span class="pkv-check" style="color:var(--mint);">✓</span>
+          <div><strong style="color:white;" data-i18n="prod.stat.i2.s">Zweibettzimmer</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.stat.i2.p">Mehr Ruhe für eine schnellere Genesung</p></div>
+        </div>
+        <div class="pkv-item pkv-yes reveal reveal-delay-2" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+          <span class="pkv-check" style="color:var(--mint);">✓</span>
+          <div><strong style="color:white;" data-i18n="prod.stat.i3.s">Chefarztbehandlung</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.stat.i3.p">Behandlung durch den leitenden Arzt</p></div>
+        </div>
+        <div class="pkv-item pkv-yes reveal reveal-delay-3" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);">
+          <span class="pkv-check" style="color:var(--mint);">✓</span>
+          <div><strong style="color:white;" data-i18n="prod.stat.i4.s">Freie Krankenhauswahl</strong><p style="color:rgba(255,255,255,0.6);" data-i18n="prod.stat.i4.p">Auch in Spezialkliniken</p></div>
+        </div>
+      </div>
+
+      <div class="note-box reveal" style="margin-top:2.5rem;background:rgba(91,200,175,0.12);border-color:rgba(91,200,175,0.25);color:rgba(255,255,255,0.85);">
+        <span data-i18n="prod.stat.note">Bleiben Sie gesetzlich versichert — und genießen Sie im Krankenhaus den Komfort eines Privatpatienten.</span>
+      </div>
+      <div style="text-align:center;margin-top:1.5rem;">
+        <a href="#" class="btn-white" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STERBEGELD SECTION ─── -->
+  <section id="sterbegeld" class="content-section alt" style="opacity:0.7;">
+    <div class="content-inner" style="max-width:800px;text-align:center;">
+      <div class="section-label">Produkt 5</div>
+      <span style="display:inline-block;background:#999;color:white;font-size:0.72rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:50px;letter-spacing:0.05em;text-transform:uppercase;margin:0.5rem 0 1rem;">Demnächst verfügbar</span>
+      <h2 class="section-title" data-i18n="sterbe.title">Sterbegeldversicherung</h2>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.7;margin-bottom:2rem;">Finanzielle Absicherung für Ihre Familie im Ernstfall — wir werden dieses Produkt bald anbieten.</p>
+
+      <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Finanzielle Absicherung für Hinterbliebene</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Würdevolle Vorsorge ohne Belastung der Familie</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Einfach und bezahlbar</span></div>
+      </div>
+
+      <span style="display:inline-flex;background:#ccc;color:white;padding:0.8rem 1.8rem;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:default;">Bald verfügbar</span>
+      <p style="color:var(--gray);font-size:0.82rem;margin-top:0.75rem;">Dieses Produkt ist noch nicht verfügbar.</p>
+    </div>
+  </section>
+
+  <!-- ─── RISIKOLEBEN ─── -->
+  <section id="risikoleben" class="content-section" style="opacity:0.7;">
+    <div class="content-inner" style="max-width:800px;text-align:center;">
+      <div class="section-label">Produkt 6</div>
+      <span style="display:inline-block;background:#999;color:white;font-size:0.72rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:50px;letter-spacing:0.05em;text-transform:uppercase;margin:0.5rem 0 1rem;">Demnächst verfügbar</span>
+      <h2 class="section-title" data-i18n="products.c6.title">Risikolebensversicherung</h2>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.7;margin-bottom:2rem;">Finanzielle Absicherung Ihrer Familie bei Tod — für Hinterbliebenenschutz. Wir werden dieses Produkt bald anbieten.</p>
+
+      <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Hinterbliebenenschutz im Todesfall</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Absicherung von Krediten und Immobilien</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>✓</span><span style="font-size:0.93rem;">Flexibel und bezahlbar</span></div>
+      </div>
+
+      <span style="display:inline-flex;background:#ccc;color:white;padding:0.8rem 1.8rem;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:default;">Bald verfügbar</span>
+      <p style="color:var(--gray);font-size:0.82rem;margin-top:0.75rem;">Dieses Produkt ist noch nicht verfügbar.</p>
+    </div>
+  </section>
+
+  <!-- ─── TIERHAFTPFLICHT ─── -->
+  <section id="tierhaftpflicht" class="content-section alt" style="opacity:0.7;">
+    <div class="content-inner" style="max-width:800px;text-align:center;">
+      <div class="section-label">Produkt 7</div>
+      <span style="display:inline-block;background:#999;color:white;font-size:0.72rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:50px;letter-spacing:0.05em;text-transform:uppercase;margin:0.5rem 0 1rem;">Demnächst verfügbar</span>
+      <h2 class="section-title" data-i18n="products.c7.title">Tierhalterhaftpflicht</h2>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.7;margin-bottom:2rem;">Haftpflichtschutz für Hunde, Katzen und Pferde — für Schäden, die Ihr Tier verursacht. Wir werden dieses Produkt bald anbieten.</p>
+
+      <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐕</span><span style="font-size:0.93rem;">Hunde</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐈</span><span style="font-size:0.93rem;">Katzen</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐎</span><span style="font-size:0.93rem;">Pferde</span></div>
+      </div>
+
+      <span style="display:inline-flex;background:#ccc;color:white;padding:0.8rem 1.8rem;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:default;">Bald verfügbar</span>
+      <p style="color:var(--gray);font-size:0.82rem;margin-top:0.75rem;">Dieses Produkt ist noch nicht verfügbar.</p>
+    </div>
+  </section>
+
+  <!-- ─── TIERKRANKEN ─── -->
+  <section id="tierkranken" class="content-section" style="opacity:0.7;">
+    <div class="content-inner" style="max-width:800px;text-align:center;">
+      <div class="section-label">Produkt 8</div>
+      <span style="display:inline-block;background:#999;color:white;font-size:0.72rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:50px;letter-spacing:0.05em;text-transform:uppercase;margin:0.5rem 0 1rem;">Demnächst verfügbar</span>
+      <h2 class="section-title" data-i18n="products.c8.title">Tierhalterkrankenversicherung</h2>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.7;margin-bottom:2rem;">Gesundheitsvorsorge für Hunde, Katzen und Pferde — Tierarzt- und OP-Kosten abgedeckt. Wir werden dieses Produkt bald anbieten.</p>
+
+      <div style="display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐕</span><span style="font-size:0.93rem;">Hunde</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐈</span><span style="font-size:0.93rem;">Katzen</span></div>
+        <div style="display:flex;align-items:center;gap:0.5rem;color:var(--gray);"><span>🐎</span><span style="font-size:0.93rem;">Pferde</span></div>
+      </div>
+
+      <span style="display:inline-flex;background:#ccc;color:white;padding:0.8rem 1.8rem;border-radius:50px;font-weight:700;font-size:0.95rem;cursor:default;">Bald verfügbar</span>
+      <p style="color:var(--gray);font-size:0.82rem;margin-top:0.75rem;">Dieses Produkt ist noch nicht verfügbar.</p>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2 data-i18n="prod.cta.h2">Finden Sie den passenden Schutz</h2>
+    <p data-i18n="prod.cta.p">Kostenlos, unverbindlich und auf Ihre Bedürfnisse zugeschnitten.</p>
+    <a href="#" class="btn-white" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/"><img src="/logo.png" alt="Smile &amp; Care" /></a>
+        <p data-i18n="footer.brand">Ihr unabhängiger Versicherungspartner in Deutschland. Wir vergleichen alle führenden Versicherer – kostenlos und ohne Verpflichtung.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col2.title">Unternehmen</h4>
+        <ul>
+          <li><a href="/ueber-uns" data-i18n="footer.col2.l1">Über uns</a></li>
+          <li><a href="/kontakt" data-i18n="footer.col2.l2">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.col3.title">Rechtliches</h4>
+        <ul>
+          <li><a href="/impressum" data-i18n="footer.col3.l1">Impressum</a></li>
+          <li><a href="/datenschutz" data-i18n="footer.col3.l2">Datenschutz</a></li>
+          <li><a href="/agb" data-i18n="footer.col3.l3">AGB</a></li>
+          <li><a href="/cookie-einstellungen" data-i18n="footer.col3.l4">Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2026 SMILE and CARE Versicherungsvermittlungsgesellschaft mbH. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="/config.js"></script>
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+    const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+  </script>
+  <script src="/translations.js"></script>
+</body>
+</html>

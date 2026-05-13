@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3F5KDCJ11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3F5KDCJ11');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Datenschutz – Smile &amp; Care</title>
+  <style>
+    :root { --mint:#5BC8AF; --mint-dark:#3BA88F; --mint-pale:#E8F8F5; --dark:#1a2e2a; --gray:#6b7c79; --gray-light:#f4faf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--dark); overflow-x:hidden; background:#fff; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:1rem 3rem; background:rgba(255,255,255,0.97); box-shadow:0 2px 20px rgba(91,200,175,0.1); backdrop-filter:blur(12px); }
+    .nav-logo a { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo img { height:44px; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { text-decoration:none; color:var(--dark); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--mint); transition:width 0.3s; border-radius:2px; }
+    .nav-links a:hover { color:var(--mint-dark); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { background:var(--mint) !important; color:white !important; padding:0.6rem 1.5rem; border-radius:50px; font-weight:600 !important; }
+    .nav-cta::after { display:none !important; }
+    .page-hero { padding:8rem 3rem 3.5rem; background:var(--gray-light); }
+    .page-hero-inner { max-width:860px; margin:0 auto; }
+    .page-breadcrumb { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .page-breadcrumb a { color:var(--mint-dark); text-decoration:none; }
+    .page-hero h1 { font-size:clamp(2rem,4vw,3rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:0.75rem; }
+    .page-hero p { color:var(--gray); font-size:1rem; }
+    .legal-wrap { max-width:860px; margin:0 auto; padding:4rem 3rem 6rem; }
+    .legal-wrap h2 { font-size:1.35rem; font-weight:700; margin:2.5rem 0 0.9rem; color:var(--dark); padding-top:2.5rem; border-top:1px solid #eee; }
+    .legal-wrap h2:first-child { margin-top:0; padding-top:0; border-top:none; }
+    .legal-wrap h3 { font-size:1.05rem; font-weight:700; margin:1.5rem 0 0.6rem; }
+    .legal-wrap p { color:var(--gray); line-height:1.8; margin-bottom:0.85rem; font-size:0.95rem; }
+    .legal-wrap ul { color:var(--gray); line-height:1.8; margin-bottom:0.85rem; padding-left:1.5rem; font-size:0.95rem; }
+    .legal-wrap ul li { margin-bottom:0.3rem; }
+    .legal-wrap a { color:var(--mint-dark); }
+    .info-box { background:var(--mint-pale); border-left:4px solid var(--mint); padding:1.25rem 1.5rem; border-radius:0 12px 12px 0; margin:1.5rem 0; }
+    .info-box p { margin:0; color:var(--dark); font-size:0.93rem; }
+    footer { background:var(--dark); padding:4rem 3rem 2rem; color:rgba(255,255,255,0.65); }
+    .footer-grid { max-width:1200px; margin:0 auto 3rem; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; }
+    .footer-brand img { height:48px; margin-bottom:1rem; filter:brightness(0) invert(1) opacity(0.9); }
+    .footer-brand p { font-size:0.9rem; line-height:1.65; max-width:260px; }
+    .footer-col h4 { color:white; font-weight:700; font-size:0.9rem; margin-bottom:1.25rem; letter-spacing:0.05em; text-transform:uppercase; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-col a { color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--mint); }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .footer-bottom p { font-size:0.85rem; }
+    .footer-badge { display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.06); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; }
+    @media (max-width:900px) { nav { padding:1rem 1.5rem; } .nav-links { display:none; } .page-hero { padding:6rem 1.5rem 2.5rem; } .legal-wrap { padding:3rem 1.5rem 5rem; } .footer-grid { grid-template-columns:1fr 1fr; } }
+  
+    /* ─── LANG SWITCHER ─── */
+    .lang-switcher { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 0.35rem;
+      background: transparent;
+      border: 1.5px solid rgba(91,200,175,0.45);
+      border-radius: 50px; padding: 0.45rem 0.95rem;
+      cursor: pointer; font-size: 0.88rem; font-weight: 600;
+      color: var(--dark); transition: all 0.2s; white-space: nowrap;
+    }
+    .lang-btn:hover { border-color: var(--mint); background: var(--mint-pale); }
+    .lang-dropdown {
+      position: absolute; top: calc(100% + 8px); right: 0;
+      background: white; border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      padding: 0.5rem; width: 380px; display: none; z-index: 200;
+      border: 1px solid rgba(91,200,175,0.15);
+    }
+    .lang-dropdown.open { display: grid; grid-template-columns: 1fr 1fr; animation: dropIn 0.18s ease; }
+    @keyframes dropIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .lang-option {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.6rem 0.85rem; border-radius: 10px;
+      cursor: pointer; font-size: 0.88rem; font-weight: 500;
+      color: var(--dark); transition: background 0.15s;
+    }
+    .lang-option:hover { background: var(--mint-pale); }
+    .lang-option.active { background: var(--mint-pale); color: var(--mint-dark); font-weight: 600; }
+    @media (max-width: 600px) { .lang-dropdown { width: 260px; } }
+
+  </style>
+</head>
+<body>
+  <nav id="mainNav">
+    <div class="nav-logo"><a href="/"><img src="/logo.png" alt="SMILE and CARE" /></a></div>
+    <ul class="nav-links">
+      <li><a href="/" data-i18n="nav.home">Start</a></li>
+      <li><a href="/#products" data-i18n="nav.products">Produkte</a></li>
+      <li><a href="/ueber-uns" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="/kontakt" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="#" class="nav-cta" data-booking-link data-i18n="nav.cta">Jetzt kostenlos beraten lassen</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()">🇩🇪 <span style="font-size:0.7rem;opacity:.7">▾</span></button>
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option" data-lang="de" onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div class="lang-option" data-lang="en" onclick="setLang('en')">🇬🇧 English</div>
+        <div class="lang-option" data-lang="fr" onclick="setLang('fr')">🇫🇷 Français</div>
+        <div class="lang-option" data-lang="it" onclick="setLang('it')">🇮🇹 Italiano</div>
+        <div class="lang-option" data-lang="es" onclick="setLang('es')">🇪🇸 Español</div>
+        <div class="lang-option" data-lang="pt" onclick="setLang('pt')">🇵🇹 Português</div>
+        <div class="lang-option" data-lang="el" onclick="setLang('el')">🇬🇷 Ελληνικά</div>
+        <div class="lang-option" data-lang="bg" onclick="setLang('bg')">🇧🇬 Български</div>
+        <div class="lang-option" data-lang="hr" onclick="setLang('hr')">🇭🇷 Hrvatski</div>
+        <div class="lang-option" data-lang="pl" onclick="setLang('pl')">🇵🇱 Polski</div>
+        <div class="lang-option" data-lang="ro" onclick="setLang('ro')">🇷🇴 Română</div>
+        <div class="lang-option" data-lang="sr" onclick="setLang('sr')">🇷🇸 Srpski</div>
+        <div class="lang-option" data-lang="sq" onclick="setLang('sq')">🇦🇱 Shqip</div>
+        <div class="lang-option" data-lang="uk" onclick="setLang('uk')">🇺🇦 Українська</div>
+        <div class="lang-option" data-lang="ru" onclick="setLang('ru')">🇷🇺 Русский</div>
+        <div class="lang-option" data-lang="tr" onclick="setLang('tr')">🇹🇷 Türkçe</div>
+        <div class="lang-option" data-lang="ar" onclick="setLang('ar')">🇸🇦 العربية</div>
+        <div class="lang-option" data-lang="fa" onclick="setLang('fa')">🇮🇷 فارسی</div>
+        <div class="lang-option" data-lang="tw" onclick="setLang('tw')">🇬🇭 Twi</div>
+        <div class="lang-option" data-lang="vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="/">Home</a> <span>›</span> <span>Datenschutz</span></div>
+      <span style="display:inline-block;background:var(--mint-pale);color:var(--mint-dark);font-size:0.8rem;font-weight:700;padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:1rem;letter-spacing:0.03em;">Datenschutz</span>
+      <h1>Datenschutzerklärung</h1>
+      <p>Stand: März 2026 &nbsp;·&nbsp; Gemäß DSGVO &amp; BDSG</p>
+    </div>
+  </div>
+
+  <div class="legal-wrap">
+
+    <!-- Intro -->
+    <div class="info-box">
+      <p><strong>Wir freuen uns sehr über Ihr Interesse an SMILE and CARE Versicherungsvermittlungsgesellschaft mbH.</strong> Datenschutz hat einen besonders hohen Stellenwert für uns. Eine Nutzung der Internetseiten ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden.</p>
+    </div>
+    <p>Die Verarbeitung personenbezogener Daten erfolgt stets im Einklang mit der Datenschutz-Grundverordnung und in Übereinstimmung mit den geltenden landesspezifischen Datenschutzbestimmungen.</p>
+    <p>SMILE and CARE hat zahlreiche technische und organisatorische Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen.</p>
+
+    <!-- Section 1 -->
+    <h2>1. Begriffsbestimmungen</h2>
+    <p>Die Datenschutzerklärung beruht auf den Begrifflichkeiten, die durch den Europäischen Richtlinien- und Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung (DSGVO) verwendet wurden:</p>
+    <ul>
+      <li><strong>Personenbezogene Daten:</strong> Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</li>
+      <li><strong>Betroffene Person:</strong> Jede identifizierte oder identifizierbare natürliche Person, deren personenbezogene Daten verarbeitet werden.</li>
+      <li><strong>Verarbeitung:</strong> Jeder Vorgang im Zusammenhang mit personenbezogenen Daten, wie das Erheben, Erfassen, Speichern, Anpassen, Abfragen, Verwenden oder Löschen.</li>
+      <li><strong>Einschränkung der Verarbeitung:</strong> Die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung einzuschränken.</li>
+      <li><strong>Profiling:</strong> Jede Art der automatisierten Verarbeitung personenbezogener Daten zur Bewertung bestimmter persönlicher Aspekte einer natürlichen Person.</li>
+      <li><strong>Pseudonymisierung:</strong> Die Verarbeitung personenbezogener Daten in einer Weise, dass die Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer bestimmten Person zugeordnet werden können.</li>
+      <li><strong>Verantwortlicher:</strong> Die natürliche oder juristische Person, die über die Zwecke und Mittel der Verarbeitung personenbezogener Daten entscheidet.</li>
+      <li><strong>Auftragsverarbeiter:</strong> Eine natürliche oder juristische Person, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</li>
+      <li><strong>Empfänger:</strong> Eine natürliche oder juristische Person, der personenbezogene Daten offengelegt werden.</li>
+      <li><strong>Dritter:</strong> Eine natürliche oder juristische Person außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den zur Verarbeitung befugten Personen.</li>
+      <li><strong>Einwilligung:</strong> Jede freiwillig für den bestimmten Fall, in informierter Weise und unmissverständlich abgegebene Willensbekundung der betroffenen Person.</li>
+    </ul>
+
+    <!-- Section 2 -->
+    <h2>2. Verantwortlicher</h2>
+    <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung ist:</p>
+    <div class="info-box">
+      <p><strong>SMILE and CARE Versicherungsvermittlungsgesellschaft mbH</strong><br/>
+      Geschäftsführer: Andreas von Hacht<br/>
+      Fehmarnstraße 11 | 22846 Norderstedt | Deutschland<br/>
+      Telefon: <a href="tel:+494032049260">040 320 49 260</a><br/>
+      Phone (International): <a href="tel:+494032049260">+49 40 320 49 260</a><br/>
+      E-Mail: <a href="mailto:info@smileandcare.eu">info@smileandcare.eu</a></p>
+    </div>
+
+    <!-- Section 3 -->
+    <h2>3. Datenschutzbeauftragter</h2>
+    <p>Der Datenschutzbeauftragte des Verantwortlichen ist:</p>
+    <div class="info-box">
+      <p><strong>Andreas von Hacht</strong><br/>
+      E-Mail: <a href="mailto:datenschutz@smileandcare.eu">datenschutz@smileandcare.eu</a><br/>
+      Website: <a href="https://www.smileandcare.eu" target="_blank" rel="noopener">www.smileandcare.eu</a></p>
+    </div>
+    <p>Jede betroffene Person kann sich jederzeit bei allen Fragen und Anregungen zum Datenschutz direkt an unseren Datenschutzbeauftragten wenden.</p>
+
+    <!-- Section 4 -->
+    <h2>4. Erfassung allgemeiner Daten und Informationen</h2>
+    <p>Die Internetseite erfasst mit jedem Aufruf durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese werden in den Logfiles des Servers gespeichert. Erfasst werden können:</p>
+    <ul>
+      <li>Browsertyp und verwendete Browserversion</li>
+      <li>Das vom zugreifenden System verwendete Betriebssystem</li>
+      <li>Die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (Referrer)</li>
+      <li>Die Unterwebseiten, welche über ein zugreifendes System auf unserer Internetseite angesteuert werden</li>
+      <li>Datum und Uhrzeit eines Zugriffs auf die Internetseite</li>
+      <li>Die Internet-Protokoll-Adresse (IP-Adresse)</li>
+      <li>Der Internet-Service-Provider des zugreifenden Systems</li>
+    </ul>
+    <p>Bei der Nutzung dieser allgemeinen Daten und Informationen zieht SMILE and CARE keine Rückschlüsse auf die betroffene Person. Diese Informationen werden vielmehr benötigt, um die Inhalte unserer Internetseite korrekt auszuliefern, die Inhalte unserer Internetseite zu optimieren, die dauerhafte Funktionsfähigkeit unserer IT-Systeme und der Technik unserer Internetseite zu gewährleisten sowie um Strafverfolgungsbehörden im Falle eines Cyberangriffes die zur Strafverfolgung notwendigen Informationen bereitzustellen.</p>
+    <p>Die erhobenen Daten und Informationen werden daher getrennt von personenbezogenen Daten gespeichert.</p>
+
+    <!-- Section 5 -->
+    <h2>5. Kontaktmöglichkeit über die Internetseite</h2>
+    <p>Die Internetseite enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu uns sowie eine unmittelbare Kommunikation ermöglichen, was ebenfalls eine allgemeine Adresse der sogenannten elektronischen Post (E-Mail-Adresse) umfasst.</p>
+    <p>Sofern eine betroffene Person per E-Mail den Kontakt mit dem für die Verarbeitung Verantwortlichen aufnimmt, werden die von der betroffenen Person freiwillig übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis übermittelten Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte.</p>
+
+    <!-- Section 6 -->
+    <h2>6. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</h2>
+    <p>Der für die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist, oder sofern dies durch den Europäischen Richtlinien- und Verordnungsgeber oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften vorgesehen wurde.</p>
+    <p>Entfällt der Speicherungszweck oder läuft eine vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt oder gelöscht.</p>
+
+    <!-- Section 7 -->
+    <h2>7. Rechte der betroffenen Person</h2>
+
+    <h3>a) Recht auf Bestätigung</h3>
+    <p>Jede betroffene Person hat das Recht, von dem für die Verarbeitung Verantwortlichen eine Bestätigung darüber zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person dieses Bestätigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an unseren Datenschutzbeauftragten wenden.</p>
+
+    <h3>b) Recht auf Auskunft (Art. 15 DSGVO)</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, jederzeit von dem für die Verarbeitung Verantwortlichen unentgeltliche Auskunft über die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat die betroffene Person Auskunftsrecht über folgende Informationen:</p>
+    <ul>
+      <li>die Verarbeitungszwecke</li>
+      <li>die Kategorien personenbezogener Daten, die verarbeitet werden</li>
+      <li>die Empfänger oder Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden</li>
+      <li>falls möglich, die geplante Dauer der Speicherung der personenbezogenen Daten oder, falls dies nicht möglich ist, die Kriterien für die Festlegung dieser Dauer</li>
+      <li>das Bestehen eines Rechts auf Berichtigung oder Löschung der sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung</li>
+      <li>das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde</li>
+      <li>wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: alle verfügbaren Informationen über die Herkunft der Daten</li>
+      <li>das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling und aussagekräftige Informationen über die involvierte Logik sowie die Tragweite und die angestrebten Auswirkungen einer derartigen Verarbeitung</li>
+      <li>ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation übermittelt wurden, sowie die geeigneten Garantien im Zusammenhang mit der Übermittlung</li>
+    </ul>
+
+    <h3>c) Recht auf Berichtigung</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, die unverzügliche Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person das Recht zu, unter Berücksichtigung der Zwecke der Verarbeitung, die Vervollständigung unvollständiger personenbezogener Daten zu verlangen.</p>
+
+    <h3>d) Recht auf Löschung (Art. 17 DSGVO)</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden Gründe zutrifft:</p>
+    <ul>
+      <li>Die personenbezogenen Daten sind für die Zwecke, für die sie erhoben oder auf sonstige Weise verarbeitet wurden, nicht mehr notwendig.</li>
+      <li>Die betroffene Person widerruft ihre Einwilligung, auf die sich die Verarbeitung stützte, und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung.</li>
+      <li>Die betroffene Person legt Widerspruch gegen die Verarbeitung ein und es liegen keine vorrangigen berechtigten Gründe für die Verarbeitung vor.</li>
+      <li>Die personenbezogenen Daten wurden unrechtmäßig verarbeitet.</li>
+      <li>Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten erforderlich.</li>
+      <li>Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft gemäß Art. 8 Abs. 1 DSGVO erhoben.</li>
+    </ul>
+
+    <h3>e) Recht auf Einschränkung der Verarbeitung</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist: die Richtigkeit der personenbezogenen Daten wird bestritten, die Verarbeitung ist unrechtmäßig, der Verantwortliche benötigt die Daten nicht länger, oder die betroffene Person hat Widerspruch gegen die Verarbeitung eingelegt.</p>
+
+    <h3>f) Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen bereitgestellt wurden, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie hat außerdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu übermitteln.</p>
+
+    <h3>g) Recht auf Widerspruch (Art. 21 DSGVO)</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten Widerspruch einzulegen. Dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling.</p>
+    <p>Werden personenbezogene Daten verarbeitet, um Direktwerbung zu betreiben, so hat die betroffene Person das Recht, jederzeit Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.</p>
+
+    <h3>h) Automatisierte Entscheidungen einschließlich Profiling</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt, sofern die Entscheidung nicht für den Abschluss oder die Erfüllung eines Vertrags erforderlich ist, aufgrund von Rechtsvorschriften zulässig ist oder mit ausdrücklicher Einwilligung erfolgt.</p>
+
+    <h3>i) Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h3>
+    <p>Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht, eine erteilte Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen. Der Widerruf der Einwilligung lässt die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung unberührt.</p>
+
+    <!-- Section 8 -->
+    <h2>8. Datenschutzbestimmungen zu Einsatz und Verwendung von Facebook</h2>
+    <p>Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite Komponenten von Facebook integriert. Die Betreibergesellschaft von Facebook ist die Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Ireland.</p>
+    <p>Durch jeden Aufruf einer Einzelseite dieser Internetseite, die durch den für die Verarbeitung Verantwortlichen betrieben wird und auf welcher eine Facebook-Komponente (Facebook-Plug-In) integriert wurde, wird der Internetbrowser auf dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Facebook-Komponente veranlasst, eine Darstellung der entsprechenden Facebook-Komponente von Facebook herunterzuladen.</p>
+    <p>Sofern die betroffene Person gleichzeitig bei Facebook eingeloggt ist, erkennt Facebook mit jedem Aufruf unserer Internetseite und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite, welche konkrete Unterseite die betroffene Person besucht. Diese Informationen werden durch die Facebook-Komponente gesammelt und durch Facebook dem jeweiligen Facebook-Account der betroffenen Person zugeordnet. Hierzu werden Cookies verwendet.</p>
+    <p>Die von Facebook veröffentlichte Datenrichtlinie, die unter <a href="https://de-de.facebook.com/about/privacy/" target="_blank" rel="noopener">https://de-de.facebook.com/about/privacy/</a> abrufbar ist, gibt Aufschluss über die Erhebung, Verarbeitung und Nutzung personenbezogener Daten durch Facebook.</p>
+
+    <!-- Section 9 -->
+    <h2>9. Datenschutzbestimmungen zu Einsatz und Verwendung von Google Analytics (mit Anonymisierungsfunktion)</h2>
+    <p>Der für die Verarbeitung Verantwortliche hat auf dieser Internetseite die Komponente Google Analytics (mit Anonymisierungsfunktion) integriert. Google Analytics verwendet sogenannte Cookies, um eine Analyse der Benutzung der Internetseite zu ermöglichen.</p>
+    <p>Google Analytics setzt über die Komponente „_gat._anonymizeIp" die IP-Adresse des Internetanschlusses der betroffenen Person, sodass eine Zuordnung zu einer bestimmten Person nicht mehr möglich ist. Zweck der Google-Analytics-Komponente ist die Analyse der Besucherströme auf unserer Internetseite.</p>
+    <p>Die betroffene Person kann die Setzung von Cookies durch unsere Internetseite jederzeit mittels einer entsprechenden Einstellung des genutzten Internetbrowsers verhindern. Darüber hinaus können bereits gesetzte Cookies jederzeit gelöscht werden. Ein Opt-Out-Add-on kann unter <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">https://tools.google.com/dlpage/gaoptout</a> heruntergeladen und installiert werden.</p>
+    <p>Weitere Informationen und die geltenden Datenschutzbestimmungen von Google können unter <a href="https://www.google.de/intl/de/policies/privacy/" target="_blank" rel="noopener">https://www.google.de/intl/de/policies/privacy/</a> abgerufen werden.</p>
+
+    <!-- Section 10 -->
+    <h2>10. Rechtsgrundlage der Verarbeitung</h2>
+    <p>Art. 6 I lit. a DSGVO dient unserem Unternehmen als Rechtsgrundlage für Verarbeitungsvorgänge, bei denen wir eine Einwilligung für einen bestimmten Verarbeitungszweck einholen.</p>
+    <p>Ist die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags erforderlich, so beruht die Verarbeitung auf Art. 6 I lit. b DSGVO. Gleiches gilt für Verarbeitungsvorgänge, die zur Durchführung vorvertraglicher Maßnahmen erforderlich sind.</p>
+    <p>Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, beruht die Verarbeitung auf Art. 6 I lit. c DSGVO.</p>
+    <p>Ist die Verarbeitung zur Wahrung eines lebenswichtigen Interesses der betroffenen Person oder einer anderen natürlichen Person erforderlich, so beruht die Verarbeitung auf Art. 6 I lit. d DSGVO.</p>
+    <p>Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich und überwiegen die Interessen, Grundrechte und Grundfreiheiten des Betroffenen dieses Interesse nicht, so dient Art. 6 I lit. f DSGVO als Rechtsgrundlage.</p>
+
+    <!-- Section 11 -->
+    <h2>11. Berechtigte Interessen an der Verarbeitung</h2>
+    <p>Basiert die Verarbeitung personenbezogener Daten auf Art. 6 I lit. f DSGVO, ist unser berechtigtes Interesse die Durchführung unserer Geschäftstätigkeit zugunsten des Wohlergehens all unserer Mitarbeiter und unserer Anteilseigner.</p>
+
+    <!-- Section 12 -->
+    <h2>12. Dauer der Speicherung personenbezogener Daten</h2>
+    <p>Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich sind.</p>
+    <p>Rechtsgrundlage hierfür sind die Aufbewahrungspflichten nach dem Handelsgesetzbuch (HGB) sowie der Abgabenordnung (AO).</p>
+
+    <!-- Section 13 -->
+    <h2>13. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung personenbezogener Daten</h2>
+    <p>Wir klären Sie darüber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z. B. Steuervorschriften) oder sich auch aus vertraglichen Regelungen (z. B. Angaben zum Vertragspartner) ergeben kann. Mitunter kann es zu einem Vertragsschluss erforderlich sein, dass eine betroffene Person uns personenbezogene Daten zur Verfügung stellt, die in der Folge durch uns verarbeitet werden müssen.</p>
+    <p>Die betroffene Person ist beispielsweise verpflichtet, uns personenbezogene Daten bereitzustellen, wenn unser Unternehmen mit ihr einen Vertrag abschließt. Eine Nichtbereitstellung der personenbezogenen Daten hätte zur Folge, dass der Vertrag mit dem Betroffenen nicht geschlossen werden könnte.</p>
+
+    <!-- Section 14 -->
+    <h2>14. Bestehen einer automatisierten Entscheidungsfindung</h2>
+    <p>Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
+
+    <!-- Final note -->
+    <div class="info-box" style="margin-top:3rem;">
+      <p>Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator in Kooperation mit den Datenschutz Medien erstellt.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/"><img src="/logo.png" alt="Smile &amp; Care" /></a><p data-i18n="footer.brand">Ihr unabhängiger Versicherungspartner in Deutschland. Wir vergleichen alle führenden Versicherer – kostenlos und ohne Verpflichtung.</p></div>
+      <div class="footer-col"><h4 data-i18n="footer.col1.title">Produkte</h4><ul><li><a href="/#features">Zahnersatz</a></li><li><a href="/#features">Kieferorthopädie</a></li><li><a href="/#features">PZR</a></li><li><a href="/#features">Implantate</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col2.title">Unternehmen</h4><ul><li><a href="/ueber-uns" data-i18n="footer.col2.l1">Über uns</a></li><li><a href="/kontakt" data-i18n="footer.col2.l2">Kontakt</a></li></ul></div>
+      <div class="footer-col"><h4 data-i18n="footer.col3.title">Rechtliches</h4><ul><li><a href="/impressum" data-i18n="footer.col3.l1">Impressum</a></li><li><a href="/datenschutz" data-i18n="footer.col3.l2">Datenschutz</a></li><li><a href="/agb" data-i18n="footer.col3.l3">AGB</a></li><li><a href="/cookie-einstellungen" data-i18n="footer.col3.l4">Cookie-Einstellungen</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 SMILE and CARE Versicherungsvermittlungsgesellschaft mbH. Alle Rechte vorbehalten.</p></div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', () => document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60));
+  </script>
+  <script src="/config.js"></script>
+  <script src="/translations.js"></script>
+</body>
+</html>

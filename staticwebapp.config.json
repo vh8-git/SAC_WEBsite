@@ -1,0 +1,37 @@
+{
+  "trailingSlash": "never",
+  "routes": [
+    {
+      "route": "/admin",
+      "rewrite": "/admin/index.html"
+    },
+    {
+      "route": "/kontakt",
+      "rewrite": "/kontakt/index.html"
+    },
+    {
+      "route": "/produkte",
+      "rewrite": "/produkte/index.html"
+    },
+    {
+      "route": "/ueber-uns",
+      "rewrite": "/ueber-uns/index.html"
+    },
+    {
+      "route": "/impressum",
+      "rewrite": "/impressum/index.html"
+    },
+    {
+      "route": "/datenschutz",
+      "rewrite": "/datenschutz/index.html"
+    },
+    {
+      "route": "/agb",
+      "rewrite": "/agb/index.html"
+    },
+    {
+      "route": "/cookie-einstellungen",
+      "rewrite": "/cookie-einstellungen/index.html"
+    }
+  ]
+}
